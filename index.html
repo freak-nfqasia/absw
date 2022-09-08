@@ -11,13 +11,23 @@
     <link rel="stylesheet" href="index.css" />
     <script type="text/javascript">
       window.onload = () => {
-        fetch('https://freak-nfq-asia.herokuapp.com/getFuckingBodPmLmTlHrCounter')
+        fetch(
+          'https://freak-nfq-asia.herokuapp.com/getFuckingBodPmLmTlHrCounter'
+        )
           .then((response) => response.json())
           .then((res) => {
             const { data } = res
             document.querySelector('.number').innerHTML = data
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+          })
+          .catch((error) => {
+            const current =
+              (parseInt(localStorage.getItem('count')) || 1300121) + 1
+            document.querySelector('.number').innerHTML = current
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+            localStorage.setItem('count', current.toString())
           })
         document.querySelector('.a').addEventListener('click', () => {
           const triggered = document.querySelector('.triggered')
@@ -78,7 +88,7 @@
         <div class="hi">Chào Thân Ái!</div>
         <div class="footer">Số lượt địt mẹ BOD, PM, TL, HR, LM NFQ Asia.</div>
         <div class="count">
-          <div class="number"></div>
+          <div class="number">1.300.121</div>
         </div>
       </div>
     </div>
