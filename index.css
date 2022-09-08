@@ -29,7 +29,7 @@
   border-bottom: 1px #4285f4 solid;
 }
 .a {
-  cursor: pointer;
+  // cursor: pointer;
 }
 #root .wrap .count {
   color: blue;
