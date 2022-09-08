@@ -1,0 +1,60 @@
+#root {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  line-height: 3;
+  min-height: 100vh;
+}
+#root .wrap {
+  width: 100%;
+  max-width: 1286px;
+  display: flex;
+  flex-flow: wrap column;
+  min-height: 100vh;
+}
+
+#root .wrap .title,
+#root .wrap .content,
+#root .wrap .hi,
+#root .wrap .footer,
+#root .wrap .count,
+#root .wrap .w,
+#root .wrap .a {
+  margin-top: 30px;
+  font-size: 20px;
+}
+#root .wrap .w {
+  border-bottom: 1px #4285f4 solid;
+}
+.a {
+  cursor: pointer;
+}
+#root .wrap .count {
+  color: blue;
+  display: flex;
+  justify-content: center;
+}
+#root .wrap .count .number {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 10px;
+  width: fit-content;
+  font-size: 40px;
+}
+#root .wrap .count .number::after {
+  content: '+';
+}
+.span {
+  color: aqua;
+  font-weight: bold;
+}
+.here {
+  font-weight: bold;
+  cursor: pointer;
+}
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}

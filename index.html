@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="haha.png" />
+    <noscript
+      >Vô đây xem thì khả năng cao không phải là bọn súc vật PM, BOD, TL, LM,
+      HR</noscript
+    >
+
+    <title>Địt mẹ toàn thể BOD, PM, TL, LM NFQ Asia</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript">
+      window.onload = () => {
+        fetch(window.location.origin + '/getFuckingBodPmLmTlHrCounter')
+          .then((response) => response.json())
+          .then((res) => {
+            const { data } = res
+            document.querySelector('.number').innerHTML = data
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+          })
+        document.querySelector('.a').addEventListener('click', () => {
+          const triggered = document.querySelector('.triggered')
+          if (triggered) return
+          const element = document.querySelector('.a')
+          const email = 'nguyen.hoang@nfq.asia'
+          const para = document.createElement('p')
+          para.className = 'triggered'
+          const makeid = (length) => {
+            let result = ''
+            const characters =
+              'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+            const charactersLength = characters.length
+            for (let i = 0; i < length; i++) {
+              result += characters.charAt(
+                Math.floor(Math.random() * charactersLength)
+              )
+            }
+            return result
+          }
+          const random = Math.floor(Math.random() * 10)
+          const e = random > 3 ? email : makeid(10) + '@nfq.asia'
+          para.innerText = `Email của người tạo ra website để giao hợp với mẫu thân của các em: ${e}`
+          element.appendChild(para)
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="wrap">
+        <div class="w">
+          <img src="haha.png" alt="" />
+          Các anh đây là những người <span class="span">Dev chân chính</span> từ
+          NFQ Viet Nam, NFQ Thai Lan, NFQ Germany, và các nước khác
+          <div class="y">
+            <div>
+              Sở dĩ anh để những dòng này ở trên đây vì Dev luôn ngồi trên đầu
+              đám BOD và Manager, ae Dev mãi đỉnh =))
+            </div>
+          </div>
+        </div>
+        <div class="a">
+          Hey BOD (board of directors), PM (project manager), TL (tech lead), LM
+          (line manager), rich phạm, an lê, lars jankowfsky (tên của các chú em
+          thì anh đéo thèm viết hoa do phần mềm like a shit mà công ty các các
+          em làm ra):
+        </div>
+        <div class="title">
+          Website này được lập ra như một lời tri ân cho những người đã giao hợp
+          với mẫu thân của các em.
+        </div>
+        <div class="content">
+          Đây cũng là sự thách thức dành cho các chú và là bãi cứt ỉa vào mặt
+          đám quái thai BOD, PM, TL, HR, LM.
+        </div>
+        <div class="hi">Chào Thân Ái!</div>
+        <div class="footer">Số lượt địt mẹ BOD, PM, TL, HR, LM NFQ Asia.</div>
+        <div class="count">
+          <div class="number"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
