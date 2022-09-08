@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, '/')))
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html')
 })
-
+ 
 const dbInfo = {
   host: 'ec2-34-200-205-45.compute-1.amazonaws.com',
   port: 5432,
